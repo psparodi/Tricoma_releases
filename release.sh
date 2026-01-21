@@ -30,14 +30,14 @@ MESSAGE=${2:-"Release $VERSION"}
 log_info "Creando release $VERSION"
 
 # 1. Verificar que no haya cambios sin commitear
-if ! git diff-index --quiet HEAD --; then
-    log_warn "Hay cambios sin commitear. Commitea primero."
-    read -p "¿Continuar de todas formas? (y/n) " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        exit 1
-    fi
-fi
+# if ! git diff-index --quiet HEAD --; then
+#     log_warn "Hay cambios sin commitear. Commitea primero."
+#     read -p "¿Continuar de todas formas? (y/n) " -n 1 -r
+#     echo
+#     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+#         exit 1
+#     fi
+# fi
 
 # # 2. Compilar firmware
 # log_info "Compilando firmware..."
